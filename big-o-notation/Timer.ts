@@ -3,7 +3,7 @@ export interface Timeable {
 }
 
 export class Timer {
-  logTimeElapsed(fn: (n: number) => number, n: number) {
+  logTimeElapsed(fn: (n: number) => number | void, n: number) {
     const t1 = performance.now();
     fn(n);
     const t2 = performance.now();
